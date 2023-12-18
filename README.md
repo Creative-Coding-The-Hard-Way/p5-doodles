@@ -1,6 +1,8 @@
-# Doodles With P5.js
+# P5 Gallery Starter
 
-An opinionated starter project for using typescript in the browser.
+This project is an opinionated starter for a gallery of P5.js sketches.
+
+Sketches are identified by their url hash and can be chosen using a dropdown.
 
 ## TODO
 
