@@ -1,7 +1,5 @@
 :root {
   --antique-white: #faebd7;
-  --chestnut: #a44a3f;
-  --slate-gray: #738290;
   --gunmetal: #272d2d;
   --moonstone: #50b2c0;
 }
@@ -68,6 +66,7 @@ p {
 
 .Top-Bar {
   background-color: var(--moonstone);
+  box-shadow: 0em 0.5em 1em 0 rgba(0, 0, 0, 0.2);
 }
 
 .Header {
