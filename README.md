@@ -1,4 +1,4 @@
-# Typescript Browser Starter
+# Doodles With P5.js
 
 An opinionated starter project for using typescript in the browser.
 
