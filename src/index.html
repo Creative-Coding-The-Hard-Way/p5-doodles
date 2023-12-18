@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creative Coding The Hard Way</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Montserrat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- my styles -->
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="./main.css" />
+
+    <!-- the main app -->
+    <script type="module" src="./app/index.ts"></script>
+
+    <!-- Favicon stuff -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./manifest/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./manifest/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./manifest/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./manifest/site.webmanifest" />
+  </head>
+  <body>
+    <main class="main_app">
+      <div class="Right-Margin"></div>
+      <div class="Left-Margin"></div>
+      <div class="Right-Margin-Top"></div>
+      <div class="Left-Margin-Top"></div>
+
+      <div class="Header">
+        <h1 id="app_title">Title</h1>
+        <nav>
+          <div class="dropdown">
+            <button>Sketches</button>
+            <div id="sketch_list"></div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="Sketch" id="sketch_root"></div>
+      <div class="Content">
+        <article>
+          <h2 id="sketch_name"></h2>
+          <p id="sketch_description"></p>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
