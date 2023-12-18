@@ -25,50 +25,52 @@ p {
   font-family: "Special Elite", serif;
 }
 
+/** Grid Layout Begin **/
 .main_app {
   display: grid;
   grid-template-columns: 1fr minmax(50%, 85ch) 1fr;
   grid-template-rows: min-content 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
-  grid-template-areas:
-    "Left-Margin-Top Header Right-Margin-Top"
-    "Sketch Sketch Sketch"
-    "Sketch Sketch Sketch"
-    "Sketch Sketch Sketch"
-    "Left-Margin Content Right-Margin";
 }
-
+.Sketch {
+  grid-area: 2 / 1 / 5 / 4;
+}
 .Right-Margin {
-  grid-area: Right-Margin;
+  grid-area: 5 / 3 / 6 / 4;
 }
-
 .Left-Margin {
-  grid-area: Left-Margin;
+  grid-area: 5 / 1 / 6 / 2;
 }
+.Content {
+  grid-area: 5 / 2 / 6 / 3;
+}
+.Top-Bar {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.Header {
+  grid-area: 1 / 2 / 2 / 3;
+}
+/** Grid Layout End **/
 
 .Sketch {
-  grid-area: Sketch;
   display: flex;
+  padding-top: 1em;
+  padding-bottom: 1em;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: flex-start;
-  background: #faebd7;
   overflow: hidden;
 }
+
 .Sketch > canvas {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0em 0.1em 0.8em 0.1em var(--gunmetal);
 }
 
-.Content {
-  grid-area: Content;
-}
-
-.Content > article {
+.Top-Bar {
+  background-color: var(--moonstone);
 }
 
 .Header {
-  background-color: var(--moonstone);
-  grid-area: Header;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -121,14 +123,4 @@ p {
       display: block;
     }
   }
-}
-
-.Left-Margin-Top {
-  grid-area: Left-Margin-Top;
-  background-color: var(--moonstone);
-}
-
-.Right-Margin-Top {
-  grid-area: Right-Margin-Top;
-  background-color: var(--moonstone);
 }

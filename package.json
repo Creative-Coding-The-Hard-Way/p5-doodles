@@ -1,5 +1,5 @@
 {
-  "name": "magic-circles",
+  "name": "p5-gallery-starter",
   "version": "1.0.0",
   "description": "",
   "repository": {
@@ -17,15 +17,12 @@
     "ci": "npm run check && npm run build"
   },
   "source": [
-    "src/index.html",
-    "src/fonts/Daedra.otf",
-    "src/fonts/Oblivion.ttf",
-    "src/fonts/OblivionWorn.ttf"
+    "src/index.html"
   ],
   "targets": {
     "default": {
       "distDir": "./output",
-      "publicUrl": "/magic-circles/"
+      "publicUrl": "/p5-gallery-starter/"
     }
   },
   "browserlist": [
