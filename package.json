@@ -17,7 +17,7 @@
     "ci": "npm run check && npm run build"
   },
   "source": [
-    "src/index.html"
+    "e11ty_dist/index.html"
   ],
   "targets": {
     "default": {
@@ -47,6 +47,7 @@
     "*.{js,css,md}": "prettier --write"
   },
   "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "normalize.css": "^8.0.1",
     "p5": "^1.9.0"
   }

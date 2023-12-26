@@ -106,3 +106,7 @@ dist
 # Parcel output files
 /output/
 /.parcel-cache/
+
+# 11ty output files
+/_site/
+/e11ty_dist/

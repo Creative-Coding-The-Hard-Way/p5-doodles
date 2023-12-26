@@ -4,9 +4,13 @@
     "esModuleInterop": true,
     "lib": ["es2021", "DOM"],
     "target": "es2021",
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["./*"]
+    }
   },
   "include": [
     "src/**/*"
   ],
-  "allowJs": true
+  "allowJs": true,
 }
