@@ -29,3 +29,5 @@ function sketch(p5: P5) {
   };
 }
 new Page("Hello Color", sketch);
+
+export {};
