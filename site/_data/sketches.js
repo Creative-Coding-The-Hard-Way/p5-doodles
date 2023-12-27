@@ -44,17 +44,29 @@ module.exports = async () => {
     const sketches_in_category = sketch_folders.map((sketch_folder) => {
       const sketch_path = path.join(category_path, sketch_folder);
       const sketch_files = fs.readdirSync(sketch_path);
-      const source = sketch_files.find((file) => path.extname(file) == ".ts");
+      const source = sketch_files.find((file) => file == "index.ts");
+      const screenshot = sketch_files.find(
+        (file) => path.extname(file) == ".jpg"
+      );
+
+      if (source == undefined) {
+        console.warn("Unable to find index.ts for", sketch_folder);
+      }
+
+      const full_sketch_folder_path = path.join(
+        "~",
+        sketches_path,
+        category_folder,
+        sketch_folder
+      );
       return {
         name: sketch_folder,
         category: category_folder,
-        source: path.join(
-          "~",
-          sketches_path,
-          category_folder,
-          sketch_folder,
-          source
-        ),
+        source: path.join(full_sketch_folder_path, source),
+        screenshot:
+          screenshot == undefined
+            ? undefined
+            : path.join(full_sketch_folder_path, screenshot),
       };
     });
     return sketches_in_category;

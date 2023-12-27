@@ -44,16 +44,30 @@ a {
 .sketch_card {
   padding: 0.5em;
   border-radius: 0.5em;
+  overflow: hidden;
 
   box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.12),
     0 0.1em 0.2em rgba(0, 0, 0, 0.24);
 
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative; /* needed for full-size link */
 }
 
 .sketch_card:hover {
   box-shadow: 0 0.8em 1.2em rgba(0, 0, 0, 0.25),
     0 0.4em 0.4em rgba(0, 0, 0, 0.22);
+}
+
+.sketch_card_link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sketch_card img {
+  display: block;
 }
 
 .sketch_card_title {

@@ -14,14 +14,20 @@ layout: layout.liquid
             {% continue %}
           {% endif %}
 
-          <a
-            class="sketch_card"
-            href=".{{sketch.page.url}}index.html"
-          >
+          <div class="sketch_card">
+            <a
+              href=".{{sketch.page.url}}index.html"
+              class="sketch_card_link"
+            ></a>
+
             <p class="sketch_card_title">
               {{sketch.data.sketch.name}}
             </p>
-          </a>
+
+            {% if sketch.data.sketch.screenshot %}
+              <img src="{{sketch.data.sketch.screenshot}}"></img>
+            {% endif %}
+          </div>
         {%- endfor -%}
     </div>
   </section>
