@@ -1,0 +1,13 @@
+---
+pagination:
+  data: sketches
+  size: 1
+  alias: sketch
+  addAllPagesToCollections: true
+permalink: "sketches/{{ sketch.category }}/{{ sketch.name | slugify }}/index.html"
+category: "{{ sketch.category }}"
+layout: layout.liquid
+---
+
+<p>Hello World</p>
+<script src="{{ sketch.source }}" type="module"></script>

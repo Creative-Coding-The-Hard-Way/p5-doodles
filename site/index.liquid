@@ -1,0 +1,29 @@
+---
+title: Creative Coding The Hard Way
+layout: layout.liquid
+---
+
+
+<main id="index_main">
+  {%- for category in collections.categories -%}
+  <section title="{{category}}">
+    <h2 class="category_header">{{category}}</h2>
+    <div class="sketch_index">
+        {%- for sketch in collections.sketches | -%}
+          {% if sketch.data.sketch.category != category %}
+            {% continue %}
+          {% endif %}
+
+          <a
+            class="sketch_card"
+            href=".{{sketch.page.url}}index.html"
+          >
+            <p class="sketch_card_title">
+              {{sketch.data.sketch.name}}
+            </p>
+          </a>
+        {%- endfor -%}
+    </div>
+  </section>
+  {%- endfor -%}
+</main>
