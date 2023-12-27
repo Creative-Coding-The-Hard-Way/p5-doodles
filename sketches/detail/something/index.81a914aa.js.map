@@ -1,1 +1,0 @@
-{"mappings":"ACAA,QAAQ,GAAG,CAAC","sources":["<anon>","src/sketches/detail/something/index.ts"],"sourcesContent":["console.log(\"Hello from index.ts\");\n\n\n//# sourceMappingURL=index.81a914aa.js.map\n","console.log(\"Hello from index.ts\");\n\nexport {};\n"],"names":["console","log"],"version":3,"file":"index.81a914aa.js.map"}
