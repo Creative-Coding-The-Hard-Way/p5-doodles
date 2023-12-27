@@ -9,8 +9,8 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "develop": "parcel",
-    "build": "parcel build",
+    "develop": "npx @11ty/eleventy && parcel",
+    "build": "npx @11ty/eleventy && parcel build",
     "check": "tsc --noEmit",
     "lint": "eslint",
     "prepare": "husky install",

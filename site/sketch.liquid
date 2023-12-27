@@ -6,8 +6,15 @@ pagination:
   addAllPagesToCollections: true
 permalink: "sketches/{{ sketch.category }}/{{ sketch.name | slugify }}/index.html"
 category: "{{ sketch.category }}"
+title: Sketch
 layout: layout.liquid
 ---
 
-<p>Hello World</p>
 <script src="{{ sketch.source }}" type="module"></script>
+
+<header class="sketch_header">
+  <a href="/">Home</a>
+</header>
+
+<main id="sketch_root" class="sketch_main">
+</main>
