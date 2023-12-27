@@ -2,8 +2,8 @@ import { Page } from "~/src/lib/page";
 import P5 from "p5";
 
 function sketch(p5: P5) {
-  const w = 2000;
-  const h = 2000;
+  const w = 800;
+  const h = 600;
 
   p5.setup = () => {
     p5.createCanvas(w, h);

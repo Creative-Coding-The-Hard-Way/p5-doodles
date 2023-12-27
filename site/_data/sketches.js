@@ -45,9 +45,10 @@ module.exports = async () => {
       const sketch_path = path.join(category_path, sketch_folder);
       const sketch_files = fs.readdirSync(sketch_path);
       const source = sketch_files.find((file) => file == "index.ts");
-      const screenshot = sketch_files.find(
-        (file) => path.extname(file) == ".jpg"
-      );
+      const screenshot = sketch_files.find((file) => {
+        const ext = path.extname(file);
+        return ext == ".jpg" || ext == ".png";
+      });
 
       if (source == undefined) {
         console.warn("Unable to find index.ts for", sketch_folder);
